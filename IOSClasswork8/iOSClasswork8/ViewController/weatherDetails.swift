@@ -23,14 +23,19 @@ class weatherDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setValue()
        getWeatherDetails()
     }
     
+    func setValue() {
+        self.remarkablePlaceImageVIew.image = self.city.remarkablePlaceImage()
+        self.cityNameLabel.text = self.city.name
+        
+    }
     
     func getWeatherDetails()
     {
-        Weather().requestWeatherFor(city: city.name) { (forcast) in
+        Weather().requestWeatherFor(city: self.city.name) { (forcast) in
             
             let tempInK = forcast!.main.temp
             let tempInC = Int((tempInK - 272.15).rounded())

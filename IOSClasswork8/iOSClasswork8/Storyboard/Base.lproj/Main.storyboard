@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0he-xZ-SNF">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,26 +12,40 @@
             <objects>
                 <tableViewController id="s1G-EN-vrf" customClass="TableViewController" customModule="iOSClaswork8" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1dC-N0-Jb4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="5sx-zJ-5i0" rowHeight="53" style="IBUITableViewCellStyleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-6q-AcS" customClass="customCell" customModule="iOSClaswork8" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-6q-AcS" customClass="CustomCell" customModule="iOSClaswork8" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="8aK-6q-AcS" id="u8H-Ug-k9D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5sx-zJ-5i0">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="53"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="الرياض" translatesAutoresizingMaskIntoConstraints="NO" id="wZi-aY-9G3">
+                                            <rect key="frame" x="0.0" y="8" width="414" height="99"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yZ-Z3-jgf">
+                                            <rect key="frame" x="20" y="40" width="57" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wZi-aY-9G3" secondAttribute="bottom" constant="-11" id="5N7-hY-QTd"/>
+                                        <constraint firstItem="wZi-aY-9G3" firstAttribute="leading" secondItem="u8H-Ug-k9D" secondAttribute="leadingMargin" constant="-20" id="EU7-dM-hZX"/>
+                                        <constraint firstItem="wZi-aY-9G3" firstAttribute="top" secondItem="u8H-Ug-k9D" secondAttribute="topMargin" constant="-3" id="kvx-EG-ZlB"/>
+                                        <constraint firstItem="8yZ-Z3-jgf" firstAttribute="leading" secondItem="u8H-Ug-k9D" secondAttribute="leadingMargin" id="pck-KP-XGF"/>
+                                        <constraint firstItem="8yZ-Z3-jgf" firstAttribute="bottom" secondItem="u8H-Ug-k9D" secondAttribute="bottomMargin" constant="-29" id="qmY-xq-Mh1"/>
+                                        <constraint firstItem="wZi-aY-9G3" firstAttribute="centerX" secondItem="u8H-Ug-k9D" secondAttribute="centerX" id="tzr-sf-zxo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityImage" destination="wZi-aY-9G3" id="geV-Nn-iMh"/>
+                                    <outlet property="cityNameLabel" destination="8yZ-Z3-jgf" id="qfc-4V-ybB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,56 +60,61 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Up8-uF-Zg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.60000000000002" y="49.50738916256158"/>
+            <point key="canvasLocation" x="781.15942028985512" y="48.883928571428569"/>
         </scene>
         <!--تفاصيل الطقس-->
         <scene sceneID="69B-0o-m3E">
             <objects>
                 <viewController id="MTw-nO-7uK" customClass="weatherDetails" customModule="iOSClaswork8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n3L-Jd-kcF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-64-udk">
-                                <rect key="frame" x="0.0" y="88" width="375" height="527"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-64-udk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="527"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="527" id="pVf-Kh-We4"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyu-Yy-EoK">
-                                <rect key="frame" x="29.000000000000004" y="677" width="60.333333333333343" height="74.666666666666629"/>
+                                <rect key="frame" x="29" y="677" width="60.5" height="158.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="63"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المدينة..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU6-vC-Txf">
-                                <rect key="frame" x="29.000000000000007" y="631.33333333333337" width="104.66666666666669" height="43.666666666666629"/>
+                                <rect key="frame" x="29" y="631.5" width="104.5" height="43.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43.666666666666629" id="rfo-e9-RZp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-Kx-esi">
-                                <rect key="frame" x="241" y="670" width="105" height="37"/>
+                                <rect key="frame" x="289" y="669" width="105" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3n-8T-LIh">
-                                <rect key="frame" x="241" y="715" width="105" height="37"/>
+                                <rect key="frame" x="289" y="714" width="105" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEs-5J-JLE">
-                                <rect key="frame" x="186" y="677" width="46.666666666666657" height="30"/>
+                                <rect key="frame" x="234" y="676" width="46.666666666666657" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-L2-UuL">
-                                <rect key="frame" x="178" y="715" width="54.666666666666657" height="36.666666666666629"/>
+                                <rect key="frame" x="226" y="714" width="54.666666666666657" height="36.666666666666629"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
                                 <nil key="textColor"/>
@@ -106,15 +125,18 @@
                         <constraints>
                             <constraint firstItem="HU6-vC-Txf" firstAttribute="leading" secondItem="7aE-lH-9U5" secondAttribute="leading" constant="29" id="45A-Rf-7pw"/>
                             <constraint firstItem="Xyu-Yy-EoK" firstAttribute="top" secondItem="HU6-vC-Txf" secondAttribute="bottom" constant="2" id="CT0-Fr-sbR"/>
+                            <constraint firstItem="kJd-64-udk" firstAttribute="leading" secondItem="7aE-lH-9U5" secondAttribute="leading" id="iDE-uW-cA1"/>
+                            <constraint firstItem="HU6-vC-Txf" firstAttribute="top" secondItem="kJd-64-udk" secondAttribute="bottom" constant="16.333333333333485" id="n9f-RU-4PT"/>
                             <constraint firstItem="7aE-lH-9U5" firstAttribute="bottom" secondItem="Xyu-Yy-EoK" secondAttribute="bottom" constant="26.329999999999998" id="n9g-Il-zSF"/>
+                            <constraint firstItem="kJd-64-udk" firstAttribute="trailing" secondItem="7aE-lH-9U5" secondAttribute="trailing" id="ner-Gd-Jhw"/>
+                            <constraint firstItem="kJd-64-udk" firstAttribute="top" secondItem="7aE-lH-9U5" secondAttribute="top" id="pNQ-xF-g48"/>
                             <constraint firstItem="Xyu-Yy-EoK" firstAttribute="leading" secondItem="7aE-lH-9U5" secondAttribute="leading" constant="29" id="wdH-aI-bWh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7aE-lH-9U5"/>
                     </view>
                     <navigationItem key="navigationItem" title="تفاصيل الطقس" id="gdg-iT-WhJ"/>
                     <connections>
-                        <outlet property="cityImageView" destination="kJd-64-udk" id="MLx-IR-iQC"/>
-                        <outlet property="cityNameLabel" destination="Xyu-Yy-EoK" id="1Ao-Ek-Sr7"/>
+                        <outlet property="cityNameLabel" destination="HU6-vC-Txf" id="WMb-cc-jUJ"/>
                         <outlet property="currentTemp" destination="Xyu-Yy-EoK" id="Igt-vI-Bn5"/>
                         <outlet property="maxTemp" destination="K3n-8T-LIh" id="zhV-Fy-sq9"/>
                         <outlet property="minTemp" destination="wtH-Kx-esi" id="gAK-qn-06x"/>
@@ -131,7 +153,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0he-xZ-SNF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hAe-Od-nMF">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -144,4 +166,7 @@
             <point key="canvasLocation" x="-31.884057971014496" y="50.892857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="الرياض" width="1029" height="369"/>
+    </resources>
 </document>
